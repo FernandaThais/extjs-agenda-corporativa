@@ -23,7 +23,7 @@ Ext.define('AgendaCorporativa.view.main.Main', {
     ui: 'navigation',
 
     defaults: {
-        border: 1,
+        border: 0,
         style: {
             borderColor: 'black',
             borderStyle: 'solid'
@@ -35,15 +35,52 @@ Ext.define('AgendaCorporativa.view.main.Main', {
         align: 'stretch'
     },
 
+    padding: '0 20',
+
     items: [{
+        // cabecalho
         xtype: 'container',
-        html: 'Cabeçalho'
+        margin: '15 0',
+        border: '0 0 3 0',
+        style: {
+            borderStyle: 'solid',
+            borderColor: 'black'
+        },
+        layout: {
+            type: 'hbox'
+        },
+        items: [{
+            xtype: 'component',
+            width: 50,
+            height: 50,
+            autoEl: {
+                tag: 'img',
+                src: '/resources/imagens/icone-agenda-200x200.png',
+                width: 50,
+                height: 50
+            }
+        }, {
+            xtype: 'component',
+            autoEl: {
+                tag: 'h1'
+            },
+            html: 'Agenda'
+        }]
     }, {
         xtype: 'container',
         flex: 1,
         html: 'Corpo'
     }, {
         xtype: 'container',
-        html: 'Rodapé'
+        margin: '15 0',
+        padding: '15 0 0 0',
+        border: '3 0 0 0',
+        style: {
+            borderStyle: 'solid',
+            borderColor: 'black',
+            textAlign: 'center'
+        },
+        html: '<div><a href="#">Sobre</a> - <a href="#">Contato</a></div>' + 
+            '<div>&copy; 2017</div>'
     }]
 });
