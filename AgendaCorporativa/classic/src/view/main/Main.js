@@ -14,7 +14,8 @@ Ext.define('AgendaCorporativa.view.main.Main', {
         'Ext.container.Container',
 
         'AgendaCorporativa.view.main.MainController',
-        'AgendaCorporativa.view.main.MainModel'
+        'AgendaCorporativa.view.main.MainModel',
+        'AgendaCorporativa.view.main.Cabecalho'
     ],
 
     controller: 'main',
@@ -38,34 +39,13 @@ Ext.define('AgendaCorporativa.view.main.Main', {
     padding: '0 20',
 
     items: [{
-        // cabecalho
-        xtype: 'container',
+        xtype: 'meu-cabecalho',
         margin: '15 0',
         border: '0 0 3 0',
         style: {
             borderStyle: 'solid',
             borderColor: 'black'
-        },
-        layout: {
-            type: 'hbox'
-        },
-        items: [{
-            xtype: 'component',
-            width: 50,
-            height: 50,
-            autoEl: {
-                tag: 'img',
-                src: '/resources/imagens/icone-agenda-200x200.png',
-                width: 50,
-                height: 50
-            }
-        }, {
-            xtype: 'component',
-            autoEl: {
-                tag: 'h1'
-            },
-            html: 'Agenda'
-        }]
+        }
     }, {
         xtype: 'container',
         flex: 1,
