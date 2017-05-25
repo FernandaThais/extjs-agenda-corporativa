@@ -22,8 +22,28 @@ Ext.define('AgendaCorporativa.view.main.Main', {
 
     ui: 'navigation',
 
+    defaults: {
+        border: 1,
+        style: {
+            borderColor: 'black',
+            borderStyle: 'solid'
+        }
+    },
+
+    layout: {
+        type: 'vbox',
+        align: 'stretch'
+    },
+
     items: [{
         xtype: 'container',
-        html: 'Olá, Mundo!'
+        html: 'Cabeçalho'
+    }, {
+        xtype: 'container',
+        flex: 1,
+        html: 'Corpo'
+    }, {
+        xtype: 'container',
+        html: 'Rodapé'
     }]
 });
